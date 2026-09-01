@@ -1,15 +1,9 @@
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-        numMap = {}
-        for i, num in enumerate(nums):
-            complement = target - num
-            if complement in numMap:
-                return [numMap[complement], i]
-            numMap[num] = i
-        return []
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        seen = {} # Dictionary to store {number: index}
         
+        for i, num in enumerate(nums):
+            difference = target - num
+            if difference in seen:
+                return [seen[difference], i]
+            seen[num] = i
