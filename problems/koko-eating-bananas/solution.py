@@ -20,7 +20,7 @@ class Solution:
         # for k in range(1,maxx(piles)+1):
         #     if cal(k,piles)==h:
         #         return k
-        l=1
+        l=min(piles)
         r=maxx(piles)
         ans=0
         while (l<=r):
