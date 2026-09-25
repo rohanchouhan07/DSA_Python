@@ -25,9 +25,6 @@ class Solution:
         ans=0
         while (l<=r):
             mid=(l+r)//2
-            # if cal(mid,piles)==h:
-                # return mid
-                # break
             if(cal(mid,piles) <= h):
                 r=mid-1
                 ans=mid
